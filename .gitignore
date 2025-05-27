@@ -1,0 +1,15 @@
+# Secretos
+.env
+server/.env
+
+# Dependencias y caches
+node_modules/
+front-emocional/node_modules/
+front-emocional/.cache/
+
+# Build
+front-emocional/build/
+
+# Logs y artefactos
+*.log
+docker-compose.yml

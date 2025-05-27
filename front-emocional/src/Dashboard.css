@@ -1,0 +1,30 @@
+/* front-emocional/src/App.css (o Dashboard.css) */
+
+.dashboard {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.dashboard h2 {
+  margin-bottom: 1.5rem;
+}
+.stat {
+  margin-bottom: 2rem;
+}
+.stat h3 {
+  margin-bottom: 0.5rem;
+}
+.stat p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.chart {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
