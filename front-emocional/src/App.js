@@ -58,6 +58,7 @@ export default function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   const [myAnonId, setMyAnonId]     = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [peerAnonId, setPeerAnonId] = useState('');
   const [chatCount, setChatCount]   = useState(0);
   const [selectedEmotion, setSelectedEmotion] = useState(null);
@@ -113,7 +114,7 @@ export default function App() {
     socket.on('user_reported',  () => { toast.success('Usuario reportado.'); endChat(); });
     socket.on('got_reported',   () => { toast.warn('Has sido reportado.'); endChat(); });
     return () => socket.off();
-  }, [myAnonId]);
+  }, );
 
   // Auto-scroll
   useEffect(() => {
@@ -131,6 +132,7 @@ export default function App() {
     setMessages(ms => [...ms, { fromAnonId: myAnonId, message: input, timestamp: new Date().toISOString() }]);
     setInput('');
   };
+  // eslint-disable-next-line no-unused-vars
   const reportUser = () => socket.emit('report_user', { room });
   const endChat = () => {
     socket.emit('leave_room', room);
